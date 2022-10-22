@@ -6,7 +6,7 @@ function changeFontSize(object, size) {
 }
 
 const input = document.querySelector("#font-size-control");
-input.addEventListener("change", (event) => {
+input.addEventListener("input", (event) => {
   const target = document.querySelector("#text");
   changeFontSize(target, event.currentTarget.value);
 });
