@@ -10,13 +10,13 @@ function getNumberOfBoxes() {
   const value = document.querySelector('* [type="number"]').value;
   const max = Number(document.querySelector('* [type="number"]').getAttribute("max"));
   const min = Number(document.querySelector('* [type="number"]').getAttribute("min"));
+  if (value === "") return 0;
   if (value < min) return min;
   if (value > max) return max;
   return value;
 }
 
 function createBoxes() {
-  destroyBoxes();
   const target = document.querySelector("#boxes");
   const boxes = [];
   for (let i = 0; i < getNumberOfBoxes(); i++) {
