@@ -21,7 +21,7 @@ function getNumberOfBoxes() {
 function createBoxes() {
   const target = document.querySelector("#boxes");
   const boxes = [];
-  for (let i = 0; i < getNumberOfBoxes(); i++) {
+  for (let i = target.childElementCount; i < +getNumberOfBoxes() + target.childElementCount; i++) {
     const box = document.createElement("div");
     box.style.width = 30 + i * 10 + "px";
     box.style.height = 30 + i * 10 + "px";
